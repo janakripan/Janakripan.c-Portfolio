@@ -27,7 +27,7 @@ const Home = () => {
     return () => clearInterval(interval)
   }, [])
   return (
-    <div className="text-white flex flex-col sm:flex-row min-h-screen bg-black">
+    <div className="text-white flex flex-col sm:flex-row lg:min-h-screen bg-black">
       
       {/* LEFT SIDE: Text Content */}
       <div className="sm:w-1/2 w-full flex flex-col justify-center gap-6 px-6 py-10">
