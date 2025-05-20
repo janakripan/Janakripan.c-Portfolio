@@ -7,7 +7,7 @@ const sour=Sour_Gummy({
 const IntroScreen = ({ setMusic }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-svh h-auto bg-[#0000008D] text-center px-4">
-      <div className={`w-[300px] bg-gray-500 rounded-2xl p-4 mb-3 ${sour.className}`}>
+      <div className={`w-[300px] bg-gray-300 rounded-2xl p-4 mb-3 ${sour.className}`}>
         <h1 className="text-3xl font-semibold mb-4">Hey! 🎵</h1>
         <p className="mb-6">
           Did you know light music can instantly uplift your mood?
