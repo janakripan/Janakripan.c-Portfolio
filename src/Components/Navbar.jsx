@@ -23,7 +23,7 @@ if(needMusic){
     const navbar = document.getElementById("navbar");
     const handleScroll = () => {
       if (!navbar) return;
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         navbar.classList.add("scrolled");
       } else {
         navbar.classList.remove("scrolled");
@@ -50,7 +50,7 @@ if(needMusic){
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (!element) return;
-    const y = element.offsetTop - 70;
+    const y = element.offsetTop - 90;
     window.scrollTo({ top: y, behavior: "smooth" });
     setISOpen(false);
   };
