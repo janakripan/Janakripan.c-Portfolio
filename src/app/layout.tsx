@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anujith VK | Software Engineer",
+  title: "Anujith VK | Software Engineer | Thalassery | Kerala | India",
   description: "Portfolio of Anujith VK — Software Engineer based in Thalassery, Kannur. Specializing in modern web development, full-stack engineering, and creative digital solutions.",
   icons: {
     icon: "/favicon.ico",  
-    apple: "/apple-touch-icon.png", 
+    apple: "/favicon.ico", 
   },
   keywords: [
     "Anujith VK",
@@ -28,8 +28,17 @@ export const metadata: Metadata = {
     "Portfolio",
     "Web Developer"
   ],
-  authors: [{ name: "Anujith VK" }],
+  authors: [{ name: "Anujith VK",url:'https://anujith-vk-portfolio.vercel.app/' }],
   creator: "Anujith VK",
+  metadataBase: new URL("https://anujith-vk-portfolio.vercel.app/"),
+   openGraph: {
+    title: "Anujith VK | Software Engineer",
+    description: "Explore the portfolio of Anujith VK — Full Stack Developer from Kerala, India.",
+    url: "https://anujith-vk-portfolio.vercel.app",
+    siteName: "Anujith VK Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 
