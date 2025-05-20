@@ -66,7 +66,7 @@ const About = () => {
             <span>👨‍💻</span>
           </motion.div>
           <div className="flex  xl:justify-between flex-wrap items-center justify-center gap-2 w-full">
-            <motion.div className="relative" variants={rightFadeIn(180,0.8)}
+            <motion.div className="relative" variants={rightFadeIn(100,0.5)}
                 initial='initial'
                 whileInView='after'
                 viewport={{once:true}}>
@@ -107,7 +107,7 @@ const About = () => {
               </div>
                               </a>
             </motion.div>
-            <motion.div  variants={rightFadeIn(150,1.2)}
+            <motion.div  variants={rightFadeIn(100,0.8)}
                 initial='initial'
                 whileInView='after' viewport={{once:true}}  className="w-[300px] min-w-[300px] h-[300px] bg-white text-black flex flex-col gap-3 justify-center px-5 pb-10 rounded-xl">
               <h1 className={`${aw.className} text-2xl `}>Education</h1>
