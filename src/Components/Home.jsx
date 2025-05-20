@@ -55,8 +55,9 @@ const Home = () => {
                 initial={{ opacity: 0, y: [50, -50] }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
-                className={`text-2xl sm:text-6xl font-bold text-transparent bg-gradient-to-r from-violet-700 via-red-800 to-green-700 bg-clip-text whitespace-nowrap ${desig.className}`}
-              >
+                className={`text-2xl sm:text-6xl font-bold text-transparent bg-gradient-to-b from-blue-900  to-pink-900 bg-clip-text drop-shadow-lg ${desig.className}`}
+
+                  >
                 {currentTitle}
               </motion.div>
             </div>
