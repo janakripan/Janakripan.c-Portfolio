@@ -94,7 +94,7 @@ const About = () => {
                   />
                 </p>
               </div>
-                <a href="/assets/Anujith_vk_Full_Stack_Resume.pdf" target="_blank">
+                <a href="/Anujith_vk_Full_Stack_Resume.pdf" target="_blank">
               <div className="absolute bottom-0 right-0 p-0.5 blur-border-2xl rounded-[7px] flex items-center justify-center w-[58px] h-[37px] animate-gradient-border">
               
                 <button
