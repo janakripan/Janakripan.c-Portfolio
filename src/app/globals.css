@@ -4,16 +4,15 @@
 }
 
 .navbar-wrapper {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
-  background:black;
+  background: black;
   height: 80px;
   display: flex;
   justify-content: center;
 }
-
 
 #navbar {
   width: 100%;
