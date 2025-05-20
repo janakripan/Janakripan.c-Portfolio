@@ -2,16 +2,19 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHand} from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin,faGithub,faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { motion } from 'framer-motion'
 import { available, handWave, image, leftFadeIn, rightFadeIn } from '@/Animation/animation'
-import { Underdog } from 'next/font/google'
+import { Underdog,Quantico } from 'next/font/google'
 import CircleTextIcon from '../Animation/circle'
 
 const underdog = Underdog({
   subsets: ['latin-ext'],
   weight: ['400'],
+})
+const desig=Quantico({
+  subsets:['latin'],
+  weight:['700']
 })
 
 const Home = () => {
@@ -46,13 +49,13 @@ const Home = () => {
           <motion.div variants={leftFadeIn(-180,1)} initial='initial' whileInView='after' viewport={{once:true}} className="flex flex-col gap-2 max-w-full">
             <h2 className="whitespace-nowrap">I'm a</h2>
             <div className="flex flex-wrap gap-2 sm:gap-6 items-baseline">
-              <p className="text-2xl sm:text-6xl whitespace-nowrap">SOFTWARE</p>
+              <p className={`text-2xl sm:text-6xl whitespace-nowrap ${desig.className}`}>SOFTWARE</p>
               <motion.div
                 key={currentTitle}
                 initial={{ opacity: 0, y: [50, -50] }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
-                className="text-2xl sm:text-6xl font-bold text-transparent bg-gradient-to-r from-violet-700 via-red-800 to-green-700 bg-clip-text whitespace-nowrap"
+                className={`text-2xl sm:text-6xl font-bold text-transparent bg-gradient-to-r from-violet-700 via-red-800 to-green-700 bg-clip-text whitespace-nowrap ${desig.className}`}
               >
                 {currentTitle}
               </motion.div>
