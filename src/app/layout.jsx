@@ -58,7 +58,7 @@ keywords: [
       {
         url: "https://anujith-vk-portfolio.vercel.app/Assets/black2.png",
         width: 1200,
-        height: 630,
+        height: 800,
         alt: "Anujith VK Portfolio",
       },
     ],
