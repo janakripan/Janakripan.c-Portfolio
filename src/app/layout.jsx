@@ -1,31 +1,54 @@
-import { image } from "motion/react-client";
 import "./globals.css";
 
 export const metadata = {
   title: "Anujith VK | Software Engineer | Thalassery | Kerala | India",
   description: "Portfolio of Anujith VK — Software Engineer based in Thalassery, Kannur. Specializing in modern web development, full-stack engineering, and creative digital solutions.",
+  metadataBase: new URL("https://anujith-vk-portfolio.vercel.app/"),
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.ico",
   },
-  image:[{
-        url: "https://anujith-vk-portfolio.vercel.app/Assets/portfolio.png",
-        width: 500,
-        height: 500,
-        alt: "Anujith VK Portfolio",
-}],
-  keywords: [
-    "Anujith VK",
-    "Software Engineer",
-    "Full Stack Developer",
-    "Thalassery",
-    "Kannur",
-    "Portfolio",
-    "Web Developer",
-  ],
+keywords: [
+  "Anujith VK",
+  "Software Engineer",
+  "Full Stack Developer",
+  "Frontend Developer",
+  "Backend Developer",
+  "Web Developer",
+  "MERN Stack Developer",
+  "React Developer",
+  "Next.js Developer",
+  "JavaScript Developer",
+  "TypeScript Developer",
+  "HTML",
+  "CSS",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "REST API Developer",
+  "Portfolio Website",
+  "Thalassery",
+  "Kannur",
+  "Kerala",
+  "India",
+  "Software Portfolio",
+  "St. Thomas College of Engineering and Technology",
+  "Modern Web Development",
+  "Responsive Design",
+  "Clean UI",
+  "SEO Optimized Website",
+  "Personal Portfolio",
+  "Tech Resume Website",
+  "Next js",
+  "Tailwind css",
+  "sanity",
+  "PostgreSql"
+],
   authors: [{ name: "Anujith VK", url: "https://anujith-vk-portfolio.vercel.app/" }],
   creator: "Anujith VK",
-  metadataBase: new URL("https://anujith-vk-portfolio.vercel.app/"),
+  alternates: {
+    canonical: "https://anujith-vk-portfolio.vercel.app/",
+  },
   openGraph: {
     title: "Anujith VK | Software Engineer",
     description: "Portfolio of Anujith VK — Software Engineer based in Thalassery, Kannur...",
@@ -34,14 +57,14 @@ export const metadata = {
     images: [
       {
         url: "https://anujith-vk-portfolio.vercel.app/Assets/portfolio.png",
-        width: 500,
-        height: 500,
+        width: 1200,
+        height: 630,
         alt: "Anujith VK Portfolio",
       },
     ],
     locale: "en_US",
     type: "website",
-  },
+  }
 };
 
 export default function RootLayout({ children }) {
