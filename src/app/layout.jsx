@@ -56,7 +56,7 @@ keywords: [
     siteName: "Anujith VK Portfolio",
     images: [
       {
-        url: "https://anujith-vk-portfolio.vercel.app/Assets/black2.jpg",
+        url: "https://anujith-vk-portfolio.vercel.app/Assets/black2.png",
         width: 1200,
         height: 630,
         alt: "Anujith VK Portfolio",
