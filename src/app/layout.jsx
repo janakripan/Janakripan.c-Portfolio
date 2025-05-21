@@ -27,8 +27,8 @@ export const metadata = {
     images: [
       {
         url: "https://anujith-vk-portfolio.vercel.app/Assets/portfolio.png",
-        width: 1200,
-        height: 630,
+        width: 200,
+        height: 200,
         alt: "Anujith VK Portfolio",
       },
     ],
