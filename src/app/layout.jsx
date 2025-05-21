@@ -1,3 +1,4 @@
+import { image } from "motion/react-client";
 import "./globals.css";
 
 export const metadata = {
@@ -7,6 +8,12 @@ export const metadata = {
     icon: "/favicon.ico",
     apple: "/favicon.ico",
   },
+  image:[{
+        url: "https://anujith-vk-portfolio.vercel.app/Assets/portfolio.png",
+        width: 500,
+        height: 500,
+        alt: "Anujith VK Portfolio",
+}],
   keywords: [
     "Anujith VK",
     "Software Engineer",
@@ -27,8 +34,8 @@ export const metadata = {
     images: [
       {
         url: "https://anujith-vk-portfolio.vercel.app/Assets/portfolio.png",
-        width: 200,
-        height: 200,
+        width: 500,
+        height: 500,
         alt: "Anujith VK Portfolio",
       },
     ],
