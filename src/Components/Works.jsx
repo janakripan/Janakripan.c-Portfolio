@@ -13,11 +13,11 @@ import {motion} from 'framer-motion'
 import { available, fading, leftFadeIn } from "@/Animation/animation";
 import Link from "next/link";
 const head = VT323({
-  subsets: ["vietnamese"],
+  subsets: ["latin"],
   weight: ["400"],
 });
 const turrent = Turret_Road({
-  subsets: ["latin-ext"],
+  subsets: ["latin"],
   weight: ["800"],
 });
 const Works = () => {
@@ -76,7 +76,7 @@ const Works = () => {
           className={` flex w-full lg:flex-1 gap-2 flex-wrap items-center justify-center ${turrent.className}`}
         >
           <motion.div variants={fading(0.8)} initial='initial' whileInView='after' viewport={{once:true}} className="relative">
-            <div id="card" className="p-2 text-black flex flex-col gap-3">
+            <div  className="p-2 text-black flex flex-col gap-3 card">
               <Image
                 width={300}
                 height={300}
@@ -105,7 +105,7 @@ const Works = () => {
           </motion.div>
 
           <motion.div variants={fading(1)} initial='initial' whileInView='after' viewport={{once:true}} className="relative">
-            <div id="card" className="p-2 text-black flex flex-col gap-3">
+            <div  className="p-2 text-black flex flex-col gap-3 card">
               <Image
                 width={300}
                 height={300}
@@ -136,7 +136,7 @@ const Works = () => {
           </motion.div>
 
           <motion.div variants={fading(1.2)} initial='initial' whileInView='after' viewport={{once:true}} className="relative">
-            <div id="card" className="p-2 text-black flex flex-col gap-3">
+            <div  className="p-2 text-black flex flex-col gap-3 card">
               <Image
                 width={300}
                 height={300}

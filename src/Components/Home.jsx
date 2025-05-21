@@ -9,7 +9,7 @@ import { Underdog,Quantico } from 'next/font/google'
 import CircleTextIcon from '../Animation/circle'
 
 const underdog = Underdog({
-  subsets: ['latin-ext'],
+  subsets: ['latin'],
   weight: ['400'],
 })
 const desig=Quantico({

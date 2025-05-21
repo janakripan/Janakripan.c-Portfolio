@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 
 const CircleTextIcon = ({ text, icon: Icon, iconColor = '#0A66C2', iconSize = 20,url='#' }) => {

@@ -8,7 +8,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import  { skills } from '../Skills'
 import {motion} from 'framer-motion'
-import { available, fading, image, leftFadeIn, rightFadeIn } from "@/Animation/animation";
+import { available, fading, image, leftFadeIn} from "@/Animation/animation";
 const head = VT323({
   subsets: ["vietnamese"],
   weight: ["400"],
@@ -72,8 +72,8 @@ const About = () => {
                 viewport={{once:true}}>
                 
               <div 
-                id="card"
-                className="text-black p-5 flex justify-center flex-col gap-3"
+                
+                className="text-black p-5 flex justify-center flex-col gap-3 card"
               >
                 <h1 className={`${aw.className} text-2xl`}>Resume</h1>
                 <p

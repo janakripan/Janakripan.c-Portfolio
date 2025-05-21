@@ -1,5 +1,4 @@
-import { animate, delay, easeInOut } from "motion";
-
+'use client'
 export const topBar = (isOpen) => ({
   initial: { rotate: 0 },
   animate: { rotate: isOpen ? 45 : 0, y: isOpen ? 6 : 0 },

@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 import Image from "next/image";
 
 const share = Share_Tech({ subsets: ['latin'], weight: ["400"] });
-const cody = Codystar({ subsets: ["latin-ext"], weight: ["400"] });
-const smooch = Smooch_Sans({ subsets: ["latin-ext"], weight: ["500"] });
+const cody = Codystar({ subsets: ["latin"], weight: ["400"] });
+const smooch = Smooch_Sans({ subsets: ["latin"], weight: ["500"] });
 
 const Navbar = ({needMusic}) => {
   const [musicOption, setMusicOption] = useState(false);

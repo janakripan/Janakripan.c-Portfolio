@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { VT323, Roboto_Condensed } from 'next/font/google';
 
 const head = VT323({
-  subsets: ['vietnamese'],
+  subsets: ['latin'],
   weight: ['400'],
 });
 

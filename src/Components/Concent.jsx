@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import {Sour_Gummy} from 'next/font/google'
 const sour=Sour_Gummy({
