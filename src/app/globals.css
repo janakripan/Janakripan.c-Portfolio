@@ -203,3 +203,101 @@
   border-color: rgba(59, 130, 246, 0.6);
   box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
 }
+
+/* Custom responsive layout and text sizing */
+.title-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+/* Single line layout from 638px onwards */
+@media (min-width: 638px) {
+  .title-container {
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+}
+
+/* Progressive text sizing from 375px onwards */
+@media (min-width: 375px) {
+  .title-text {
+    font-size: 1.875rem !important; /* text-3xl */
+    min-height: 2.25rem; /* Consistent height to prevent jumping */
+    display: flex;
+    align-items: center;
+  }
+  
+  .animated-title {
+    min-width: 12rem; /* Fixed width to fit DEVELOPER */
+  }
+}
+
+@media (min-width: 425px) {
+  .title-text {
+    font-size: 2.25rem !important; /* text-4xl */
+    min-height: 2.7rem;
+  }
+  
+  .animated-title {
+    min-width: 14rem; /* Larger width for bigger text */
+  }
+}
+
+@media (min-width: 500px) {
+  .title-text {
+    font-size: 3rem !important; /* text-5xl */
+    min-height: 3.6rem;
+  }
+  
+  .animated-title {
+    min-width: 18rem; /* Even larger for text-5xl */
+  }
+}
+
+@media (min-width: 638px) {
+  .title-text {
+    font-size: 2.5rem !important; /* text-4xl for single line fit */
+    min-height: 3rem;
+  }
+  
+  .animated-title {
+    min-width: 16rem; /* Adjusted for single line layout */
+  }
+}
+
+@media (min-width: 768px) {
+  .title-text {
+    font-size: 3rem !important; /* text-5xl */
+    min-height: 3.6rem;
+  }
+  
+  .animated-title {
+    min-width: 18rem;
+  }
+}
+
+/* Fix layout for 768px-1024px range to move image down */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text-section {
+    justify-content: flex-start !important;
+  }
+  
+  .image-section {
+    align-items: flex-end !important;
+    justify-content: center !important;
+    padding-top: 4rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-text {
+    font-size: 3.75rem !important; /* text-6xl */
+    min-height: 4.5rem;
+  }
+  
+  .animated-title {
+    min-width: 22rem; /* Largest width for text-6xl */
+  }
+}

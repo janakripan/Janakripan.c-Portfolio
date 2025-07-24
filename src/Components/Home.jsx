@@ -30,7 +30,7 @@ const Home = () => {
     return () => clearInterval(interval)
   }, [])
   return (
-    <div className="text-white flex flex-col sm:flex-row lg:min-h-screen relative pt-20 xl:pt-0">
+    <div className="text-white flex flex-col sm:flex-row lg:min-h-screen relative pt-14 home-container">
       {/* Background gradient orbs with enhanced blending */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-500/20 to-purple-500/25 rounded-full blur-3xl animate-pulse-glow"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/25 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '1s'}}></div>
@@ -38,7 +38,7 @@ const Home = () => {
       <div className="absolute top-10 right-20 w-60 h-60 bg-gradient-to-r from-indigo-500/15 to-blue-400/20 rounded-full blur-2xl animate-float"></div>
       <div className="absolute bottom-40 left-20 w-52 h-52 bg-gradient-to-r from-violet-500/15 to-purple-400/20 rounded-full blur-2xl animate-float" style={{animationDelay: '3s'}}></div>
       
-      <div className="sm:w-1/2 w-full flex flex-col justify-center gap-6 px-6 py-10 relative z-10">
+      <div className="sm:w-1/2 w-full flex flex-col justify-center gap-6 px-6 py-10 relative z-10 text-section">
          <motion.div variants={leftFadeIn(-50,0.5)}  initial='initial' whileInView='after' viewport={{once:true}} className="flex gap-4 items-center flex-wrap">
           <h1 className={`${underdog.className} text-2xl flex items-center gap-2`}>
             Hi There <span className="text-3xl sm:text-4xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Anujith</span> here
@@ -51,14 +51,14 @@ const Home = () => {
         <div className={`${underdog.className} text-2xl font-bold w-full`}>
           <motion.div variants={leftFadeIn(-180,1)} initial='initial' whileInView='after' viewport={{once:true}} className="flex flex-col gap-2 max-w-full">
             <h2 className="whitespace-nowrap">I'm a</h2>
-            <div className="flex flex-wrap gap-2 sm:gap-6 items-baseline">
-              <p className={`text-2xl sm:text-6xl whitespace-nowrap ${desig.className}`}>SOFTWARE</p>
+            <div className="title-container">
+              <p className={`text-2xl title-text whitespace-nowrap ${desig.className}`}>SOFTWARE</p>
               <motion.div
                 key={currentTitle}
                 initial={{ opacity: 0, y: [50, -50] }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
-                className={`text-2xl sm:text-6xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text drop-shadow-2xl ${desig.className}`}
+                className={`text-2xl title-text animated-title font-bold text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text drop-shadow-2xl ${desig.className}`}
 
                   >
                 {currentTitle}
@@ -106,7 +106,7 @@ const Home = () => {
       </div>
 
       {/* RIGHT SIDE: Image */}
-      <div className="relative w-full sm:w-1/2 flex items-center justify-center p-6 z-10">
+      <div className="relative w-full sm:w-1/2 flex items-center justify-center p-6 z-10 image-section">
         <motion.div variants={image} initial='initial' whileInView='animate' viewport={{once:true}} className="relative w-full max-w-[400px]">
           <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full blur-2xl animate-pulse-glow"></div>
           <div className="absolute -inset-6 bg-gradient-to-r from-cyan-400/10 to-blue-600/15 rounded-full blur-3xl"></div>
