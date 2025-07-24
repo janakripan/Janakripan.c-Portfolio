@@ -28,7 +28,7 @@ const Portfolio = () => {
         <section id="work" className="w-full lg:min-h-screen h-auto pt-5">
           <Works />
         </section>
-        <section id="contact" className="w-full lg:min-h-screen h-auto pt-5">
+        <section id="contact" className="w-full h-auto pt-5">
           <Contact />
         </section>
       </section>

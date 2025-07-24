@@ -60,7 +60,7 @@ if(needMusic){
       <div id="navbar" className="px-2 sm:p-5">
         <div id="navbar-inner" className="text-white flex w-full z-100 justify-between items-center">
           <div className="flex cursor-default items-center justify-center gap-2">
-            <Image src='/Assets/logo.png' width={40} height={40} alt="icon" className="pt-2" />
+            <Image src='/Assets/logo.png' width={40} height={40} alt="Anujith VK Logo - Software Engineer Portfolio" className="pt-2" />
             <h1 className={`${share.className} text-white`}>ANUJITH VK</h1>
           </div>
           <div onClick={() => setMusicOption(!musicOption)}>

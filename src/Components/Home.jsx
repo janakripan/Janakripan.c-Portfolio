@@ -30,21 +30,22 @@ const Home = () => {
     return () => clearInterval(interval)
   }, [])
   return (
-    <div className="text-white flex flex-col sm:flex-row lg:min-h-screen bg-black">
+    <div className="text-white flex flex-col sm:flex-row lg:min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+      {/* Background gradient orbs */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
       
-      {/* LEFT SIDE: Text Content */}
-      <div className="sm:w-1/2 w-full flex flex-col justify-center gap-6 px-6 py-10">
-        {/* Intro Header */}
+      <div className="sm:w-1/2 w-full flex flex-col justify-center gap-6 px-6 py-10 relative z-10">
          <motion.div variants={leftFadeIn(-50,0.5)}  initial='initial' whileInView='after' viewport={{once:true}} className="flex gap-4 items-center flex-wrap">
           <h1 className={`${underdog.className} text-2xl flex items-center gap-2`}>
-            Hi There <span className="text-3xl sm:text-4xl">Anujith</span> here
+            Hi There <span className="text-3xl sm:text-4xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Anujith</span> here
           </h1>
           <motion.div {...handWave} style={{ transformOrigin: 'bottom center' }}  >
            <div className='text-3xl'>👋</div>
           </motion.div>
         </motion.div>
 
-        {/* Title Section */}
         <div className={`${underdog.className} text-2xl font-bold w-full`}>
           <motion.div variants={leftFadeIn(-180,1)} initial='initial' whileInView='after' viewport={{once:true}} className="flex flex-col gap-2 max-w-full">
             <h2 className="whitespace-nowrap">I'm a</h2>
@@ -55,7 +56,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: [50, -50] }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
-                className={`text-2xl sm:text-6xl font-bold text-transparent bg-gradient-to-b from-blue-900  to-pink-900 bg-clip-text drop-shadow-lg ${desig.className}`}
+                className={`text-2xl sm:text-6xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text drop-shadow-2xl ${desig.className}`}
 
                   >
                 {currentTitle}
@@ -64,11 +65,12 @@ const Home = () => {
           </motion.div>
         </div>
 
-        {/* Description for desktop only */}
-        <div className={`hidden sm:block pt-6 text-base sm:text-xl text-justify leading-relaxed max-w-3xl ${underdog.className}`}>
+    
+        <div className={`hidden sm:block pt-6 text-base sm:text-xl text-justify leading-relaxed max-w-3xl ${underdog.className} backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10 shadow-2xl`}>
           <motion.p variants={leftFadeIn(-190,1.8)} initial='initial' whileInView='after' viewport={{once:true}}>
-              Welcome! I'm a Software Engineer passionate about building modern, user-focused web applications.
-              From crafting smooth front-end experiences to developing powerful back-end systems, I love bringing ideas to life through clean, efficient code
+              Welcome! I'm Anujith VK, a passionate Software Engineer and Full Stack Developer from Thalassery, Kerala. 
+              I specialize in building modern, scalable web applications using React, Next.js, Node.js, and the MERN stack. 
+              From crafting intuitive front-end experiences to developing robust back-end systems, I bring ideas to life with clean, efficient code.
           </motion.p>
           <div className='flex flex-col gap-1 items-center justify-center pt-5 text-3xl font-bold'>
            <motion.p variants={rightFadeIn(500,2)} initial='initial' whileInView='after' viewport={{once:true}} className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-400 to-green-500 font-bold text-xl">I'm Available on</motion.p>
@@ -102,28 +104,28 @@ const Home = () => {
       </div>
 
       {/* RIGHT SIDE: Image */}
-      <div className="relative w-full sm:w-1/2 flex items-center justify-center p-6">
+      <div className="relative w-full sm:w-1/2 flex items-center justify-center p-6 z-10">
         <motion.div variants={image} initial='initial' whileInView='animate' viewport={{once:true}} className="relative w-full max-w-[400px]">
-          <Image
-            src="/Assets/portfolio.png"
-            alt="portfolio image"
-            width={400}
-            height={400}
-            className="w-full h-auto object-contain"
-          />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none" />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-transparent to-black pointer-events-none" />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent via-transparent to-black pointer-events-none" />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black pointer-events-none" />
+          <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-2xl"></div>
+          <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md rounded-3xl p-2 border border-white/10 shadow-2xl">
+            <Image
+              src="/Assets/portfolio.png"
+              alt="Anujith VK - Software Engineer and Full Stack Developer Portfolio"
+              width={400}
+              height={400}
+              className="w-full h-auto object-contain rounded-2xl"
+            />
+          </div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none rounded-3xl" />
         </motion.div>
       </div>
 
       {/* Description for mobile only */}
-      <div className={`block sm:hidden px-6 pb-10 text-base text-justify leading-relaxed ${underdog.className}`}>
+      <div className={`block sm:hidden px-6 pb-10 text-base text-justify leading-relaxed ${underdog.className} relative z-10 backdrop-blur-sm bg-white/5 rounded-2xl mx-6 p-6 border border-white/10`}>
         <p>
-            I'm a passionate software developer who enjoys building clean, user-friendly applications.
-            I work across the full stack, from designing smooth front-end interfaces to developing strong back-end systems.
-            I love solving problems and turning ideas into real, working solutions with code.
+            I'm Anujith VK, a passionate Software Engineer and Full Stack Developer from Thalassery, Kerala.
+            I specialize in React, Next.js, Node.js, and MERN stack development to create modern web applications.
+            I love solving complex problems and turning innovative ideas into scalable digital solutions.
           </p>
              <div className='flex flex-col gap-1 items-center justify-center pt-5 text-3xl font-bold'>
            <motion.p variants={rightFadeIn(100,1)} initial='initial' whileInView='after' viewport={{once:true}} className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-400 to-green-500 font-bold text-xl">I'm Available on</motion.p>

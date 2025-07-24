@@ -28,27 +28,31 @@ const wall = Wallpoet({
 const About = () => {
   const [skillList,setSkillList]=useState(false)
   return (
-    <section className="bg-black flex flex-col gap-5 text-white py-5 px-6 md:px-20">
+    <section className="bg-gradient-to-br from-black via-gray-900 to-black flex flex-col gap-5 text-white py-5 px-6 md:px-20 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
       {/* Header */}
       <div className="flex items-center justify-center mb-8">
         <p
-          className={`px-6 py-2 rounded-full bg-[rgba(201,198,198,0.15)] text-lg tracking-widest ${head.className}`}
+          className={`px-8 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-lg tracking-widest ${head.className} backdrop-blur-md border border-white/10 shadow-xl`}
         >
           ABOUT ME
         </p>
       </div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start relative z-10">
         {/* Text Content */}
-        <motion.div viewport={{once:true}} variants={leftFadeIn(-100,0.8)} initial='initial' whileInView='after' className="bg-white/18 backdrop-blur-md rounded-xl p-8 text-gray-100 shadow-lg">
+        <motion.div viewport={{once:true}} variants={leftFadeIn(-100,0.8)} initial='initial' whileInView='after' className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-8 text-gray-100 shadow-2xl border border-white/10 relative overflow-hidden">
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-2xl"></div>
           <h2
-            className={`text-3xl font-bold mb-4 ${head.className} underline-offset-5 underline `}
+            className={`text-3xl font-bold mb-4 ${head.className} underline-offset-5 underline bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent relative z-10`}
           >
             A Short Breif About Me
           </h2>
           <p
-            className={`leading-relaxed text-xl mb-4 text-justify ${tinos.className}`}
+            className={`leading-relaxed text-xl mb-4 text-justify ${tinos.className} relative z-10`}
             style={{ hyphens: "auto" }}
           >
             I'm a passionate full stack developer who enjoys building clean,
@@ -123,9 +127,11 @@ const About = () => {
           </div>
         </div>
       </div>
-<motion.div variants={available} initial='initial' whileInView='after' viewport={{once:true}} className={`w-full p-5 flex flex-col gap-3 justify-center rounded-2xl relative bg-white/18`}>
-  <h1 className={`${aw.className} text-2xl self-center`}>My Skills</h1>
-  <p className={`${tinos.className} self-center text-center`}>
+<motion.div variants={available} initial='initial' whileInView='after' viewport={{once:true}} className={`w-full p-8 flex flex-col gap-4 justify-center rounded-3xl relative bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md border border-white/10 shadow-2xl overflow-hidden`}>
+  <div className="absolute -top-10 -left-10 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-2xl"></div>
+  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-2xl"></div>
+  <h1 className={`${aw.className} text-3xl self-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent relative z-10`}>My Skills</h1>
+  <p className={`${tinos.className} self-center text-center relative z-10 text-gray-200`}>
     Here are the technologies and tools I work with — always learning, always improving to build smarter, stronger solutions.
   </p>
 {!skillList ?

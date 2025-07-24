@@ -81,19 +81,21 @@ const Contact = () => {
     }
   };
   return (
-    <div className="text-white px-5 pt-2">
-      <div className="flex items-center justify-center">
-        <p className={`px-4 py-1 rounded-full bg-[rgba(201,198,198,0.15)] ${head.className}`}>
+    <div className="text-white px-5 py-2 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96  bg-gradient-to-bl from-blue-500/8 via-blue-600/4 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-20 -left-20 w-[120%] h-50 bg-gradient-to-t from-blue-400/12 via-blue-500/6 to-transparent blur-2xl"></div>
+      <div className="flex items-center justify-center relative z-10">
+        <p className={`px-8 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-md border border-white/10 shadow-xl text-lg tracking-widest ${head.className}`}>
           CONTACT ME
         </p>
       </div>
 
       <div className="w-full flex flex-col md:flex-row">
         {/* Contact Form */}
-        <div className="md:w-[50%] order-2 md:order-1 w-full flex flex-col gap-5 items-center justify-center md:px-10 pt-10 pb-0">
+        <div className="md:w-[50%] order-2 md:order-1 w-full flex flex-col gap-5 items-center justify-center md:px-10 py-8 relative z-10">
           <form
             onSubmit={onSubmit}
-            className={`flex flex-col gap-3 p-5 max-w-[400px] w-full h-auto border border-gray-500 rounded-2xl ${robo.className}`}
+            className={`flex flex-col gap-4 p-6 max-w-[400px] w-full h-auto bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md border border-white/20 rounded-3xl shadow-2xl ${robo.className}`}
           >
             <input
               type="text"
@@ -102,7 +104,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder="Enter your name"
-              className="border py-1 px-2 w-full rounded-xl outline-none border-gray-500"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 py-3 px-4 w-full rounded-xl outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all text-white placeholder-gray-300"
             />
             <input
               type="email"
@@ -111,7 +113,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder="Enter your email"
-              className="border py-1 px-2 w-full rounded-xl outline-none border-gray-500"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 py-3 px-4 w-full rounded-xl outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all text-white placeholder-gray-300"
             />
             <input
               type="tel"
@@ -120,7 +122,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder="Enter your mobile number"
-              className="border py-1 px-2 w-full rounded-xl outline-none border-gray-500"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 py-3 px-4 w-full rounded-xl outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all text-white placeholder-gray-300"
             />
             <input
               type="text"
@@ -129,19 +131,19 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder="Enter subject"
-              className="border py-1 px-2 w-full rounded-xl outline-none border-gray-500"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 py-3 px-4 w-full rounded-xl outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all text-white placeholder-gray-300"
             />
             <textarea
               name="message"
               value={data.message}
               onChange={handleChange}
               required
-              className="border py-1 px-2 w-full rounded-xl outline-none h-[150px] resize-none border-gray-500"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 py-3 px-4 w-full rounded-xl outline-none h-[150px] resize-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all text-white placeholder-gray-300"
               placeholder="Enter your message"
             ></textarea>
             <button
               type="submit"
-              className="w-[150px] h-[40px] self-center border border-gray-500 cursor-pointer hover:bg-gradient-to-br from-violet-600 via-gray-600 to-green-500 rounded-full"
+              className="w-[160px] h-[45px] self-center bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer hover:from-blue-600 hover:to-purple-700 rounded-full font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               Submit
             </button>
@@ -150,10 +152,13 @@ const Contact = () => {
         </div>
 
         {/* Globe + Quote */}
-        <div className="flex-1 p-10  md:order-2 flex flex-col items-center justify-center gap-10 perspective-container">
-          <div className="glob w-[300px] h-[300px] bg-white rounded-full relative"></div>
+        <div className="flex-1 p-6 md:p-8 md:order-2 flex flex-col items-center justify-center gap-6 perspective-container relative z-10">
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full blur-2xl"></div>
+            <div className="glob w-[300px] h-[300px] bg-white rounded-full relative shadow-2xl"></div>
+          </div>
 
-          <blockquote className="text-center text-xl md:text-3xl text-violet-200 font-semibold italic leading-relaxed max-w-xl mt-6">
+          <blockquote className="text-center text-xl md:text-2xl bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent font-semibold italic leading-relaxed max-w-xl mt-6 backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
             “Communication is the bridge between confusion and clarity — reach out and let's build that bridge.”
           </blockquote>
         </div>
