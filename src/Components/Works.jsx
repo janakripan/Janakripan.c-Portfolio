@@ -22,10 +22,11 @@ const turrent = Turret_Road({
 });
 const Works = () => {
   return (
-    <div className="text-white px-5 py-2 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-r from-purple-500/8 to-blue-500/8 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-blue-500/8 to-cyan-500/8 rounded-full blur-3xl"></div>
+    <div className="text-white px-5 py-2 relative">
+      {/* Background decorative elements with enhanced blending */}
+      <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-r from-purple-500/18 to-blue-500/22 rounded-full blur-3xl animate-pulse-glow"></div>
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-blue-500/18 to-cyan-500/22 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '1s'}}></div>
+      <div className="absolute top-1/3 right-20 w-64 h-64 bg-gradient-to-r from-indigo-500/15 to-violet-500/18 rounded-full blur-2xl animate-float"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
             <div className="flex items-center justify-center mb-8 relative z-10">
         <p

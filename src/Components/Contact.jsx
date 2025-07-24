@@ -81,9 +81,10 @@ const Contact = () => {
     }
   };
   return (
-    <div className="text-white px-5 py-2 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96  bg-gradient-to-bl from-blue-500/8 via-blue-600/4 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-20 -left-20 w-[120%] h-50 bg-gradient-to-t from-blue-400/12 via-blue-500/6 to-transparent blur-2xl"></div>
+    <div className="text-white px-5 py-2 relative">
+      <div className="absolute top-0 right-0 w-96 bg-gradient-to-bl from-blue-500/20 via-blue-600/15 to-transparent rounded-full blur-3xl animate-pulse-glow"></div>
+      <div className="absolute -bottom-20 -left-20 w-[120%] h-50 bg-gradient-to-t from-blue-400/25 via-blue-500/18 to-transparent blur-2xl animate-pulse-glow" style={{animationDelay: '1.5s'}}></div>
+      <div className="absolute top-1/3 left-10 w-72 h-72 bg-gradient-to-r from-purple-500/15 to-indigo-500/20 rounded-full blur-2xl animate-float"></div>
       <div className="flex items-center justify-center relative z-10">
         <p className={`px-8 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-md border border-white/10 shadow-xl text-lg tracking-widest ${head.className}`}>
           CONTACT ME

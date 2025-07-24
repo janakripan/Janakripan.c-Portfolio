@@ -30,11 +30,13 @@ const Home = () => {
     return () => clearInterval(interval)
   }, [])
   return (
-    <div className="text-white flex flex-col sm:flex-row lg:min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-      {/* Background gradient orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
+    <div className="text-white flex flex-col sm:flex-row lg:min-h-screen relative">
+      {/* Background gradient orbs with enhanced blending */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-500/20 to-purple-500/25 rounded-full blur-3xl animate-pulse-glow"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/25 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '1s'}}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-cyan-500/15 to-blue-500/20 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '2s'}}></div>
+      <div className="absolute top-10 right-20 w-60 h-60 bg-gradient-to-r from-indigo-500/15 to-blue-400/20 rounded-full blur-2xl animate-float"></div>
+      <div className="absolute bottom-40 left-20 w-52 h-52 bg-gradient-to-r from-violet-500/15 to-purple-400/20 rounded-full blur-2xl animate-float" style={{animationDelay: '3s'}}></div>
       
       <div className="sm:w-1/2 w-full flex flex-col justify-center gap-6 px-6 py-10 relative z-10">
          <motion.div variants={leftFadeIn(-50,0.5)}  initial='initial' whileInView='after' viewport={{once:true}} className="flex gap-4 items-center flex-wrap">
@@ -106,7 +108,8 @@ const Home = () => {
       {/* RIGHT SIDE: Image */}
       <div className="relative w-full sm:w-1/2 flex items-center justify-center p-6 z-10">
         <motion.div variants={image} initial='initial' whileInView='animate' viewport={{once:true}} className="relative w-full max-w-[400px]">
-          <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-2xl"></div>
+          <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full blur-2xl animate-pulse-glow"></div>
+          <div className="absolute -inset-6 bg-gradient-to-r from-cyan-400/10 to-blue-600/15 rounded-full blur-3xl"></div>
           <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md rounded-3xl p-2 border border-white/10 shadow-2xl">
             <Image
               src="/Assets/portfolio.png"

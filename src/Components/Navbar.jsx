@@ -79,7 +79,7 @@ if(needMusic){
             <motion.div {...middleBar(isOpen)} className="w-[25px] h-[2px] bg-white rounded-full" />
             <motion.div {...bottomBar(isOpen)} className="w-[15px] h-[2px] bg-white rounded-full self-end mr-3" />
           </div>
-          <motion.div {...sideNav(isOpen)} className={`bg-[rgba(60,58,58,0.5)] cursor-pointer w-[150px] h-[180px] absolute top-16 rounded-md right-5 gap-3 p-2 items-center text-[19px] justify-center flex flex-col ${smooch.className}`}>
+          <motion.div {...sideNav(isOpen)} className={`bg-[rgba(20,20,30,0.6)] backdrop-filter backdrop-blur-md border border-blue-500/20 cursor-pointer w-[150px] h-[180px] absolute top-16 rounded-md right-5 gap-3 p-2 items-center text-[19px] justify-center flex flex-col ${smooch.className}`}>
             <p onClick={() => scrollToSection("home")}>HOME</p>
             <p onClick={() => scrollToSection("about")}>ABOUT</p>
             <p onClick={() => scrollToSection("work")}>WORK</p>

@@ -28,10 +28,11 @@ const wall = Wallpoet({
 const About = () => {
   const [skillList,setSkillList]=useState(false)
   return (
-    <section className="bg-gradient-to-br from-black via-gray-900 to-black flex flex-col gap-5 text-white py-5 px-6 md:px-20 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
+    <section className="flex flex-col gap-5 text-white py-5 px-6 md:px-20 relative">
+      {/* Background decorative elements with enhanced blending */}
+      <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-purple-500/20 to-blue-500/25 rounded-full blur-3xl animate-pulse-glow"></div>
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-cyan-500/25 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '1.5s'}}></div>
+      <div className="absolute top-1/2 right-20 w-48 h-48 bg-gradient-to-r from-indigo-500/15 to-violet-500/20 rounded-full blur-2xl animate-float"></div>
       {/* Header */}
       <div className="flex items-center justify-center mb-8">
         <p
@@ -45,7 +46,7 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start relative z-10">
         {/* Text Content */}
         <motion.div viewport={{once:true}} variants={leftFadeIn(-100,0.8)} initial='initial' whileInView='after' className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-8 text-gray-100 shadow-2xl border border-white/10 relative overflow-hidden">
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-2xl"></div>
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-blue-500/30 to-purple-500/35 rounded-full blur-2xl animate-pulse-glow"></div>
           <h2
             className={`text-3xl font-bold mb-4 ${head.className} underline-offset-5 underline bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent relative z-10`}
           >
