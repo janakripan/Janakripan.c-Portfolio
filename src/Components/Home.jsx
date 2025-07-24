@@ -30,7 +30,7 @@ const Home = () => {
     return () => clearInterval(interval)
   }, [])
   return (
-    <div className="text-white flex flex-col sm:flex-row lg:min-h-screen relative pt-20 lg:pt-0">
+    <div className="text-white flex flex-col sm:flex-row lg:min-h-screen relative pt-20 xl:pt-0">
       {/* Background gradient orbs with enhanced blending */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-500/20 to-purple-500/25 rounded-full blur-3xl animate-pulse-glow"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/25 rounded-full blur-3xl animate-pulse-glow" style={{animationDelay: '1s'}}></div>
