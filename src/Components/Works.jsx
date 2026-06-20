@@ -174,10 +174,10 @@ const Works = () => {
   <h2 className={`${turrent.className} text-3xl mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center`}>How to Become a Developer</h2>
   <ol className="list-decimal list-inside leading-relaxed space-y-3 text-gray-200">
     <li className="hover:text-white transition-colors duration-300"><strong className="text-blue-400">Start with the Basics:</strong> Learn HTML, CSS, and JavaScript. Focus on building simple pages first.</li>
-    <li className="hover:text-white transition-colors duration-300"><strong className="text-purple-400">Master a Tech Stack:</strong> I chose the MERN stack — MongoDB, Express.js, React, and Node.js — for full-stack development.</li>
-    <li className="hover:text-white transition-colors duration-300"><strong className="text-cyan-400">Build Projects:</strong> Apply what you learn by building real-world apps. My Nike clone and blog site taught me a lot.</li>
-    <li className="hover:text-white transition-colors duration-300"><strong className="text-green-400">Understand Git & GitHub:</strong> Version control is essential. Learn to collaborate and track your code effectively.</li>
-    <li className="hover:text-white transition-colors duration-300"><strong className="text-pink-400">Keep Improving:</strong> Read docs, watch videos, and follow dev communities. Stay curious and build consistently.</li>
+    <li className="hover:text-white transition-colors duration-300"><strong className="text-purple-400">Master a Tech Stack:</strong> I chose the MERN stack and Next.js for modern, full-stack responsive web development.</li>
+    <li className="hover:text-white transition-colors duration-300"><strong className="text-cyan-400">Build Real-World Projects:</strong> Apply what you learn by building practical apps and modern UI concepts. My work at Scanntek IT Solutions taught me a lot.</li>
+    <li className="hover:text-white transition-colors duration-300"><strong className="text-green-400">Gain Experience:</strong> Transition from personal projects to internships and full-time roles, just like my journey at Scanntek IT Solutions.</li>
+    <li className="hover:text-white transition-colors duration-300"><strong className="text-pink-400">Keep Improving:</strong> Read docs, experiment with new libraries, and follow dev communities. Stay curious and build consistently.</li>
   </ol>
   <p className="mt-6 italic text-center bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent backdrop-blur-sm bg-white/5 rounded-2xl p-4 border border-white/10">
     Everyone's path is different. This is what worked for me — and I'm still learning every day.

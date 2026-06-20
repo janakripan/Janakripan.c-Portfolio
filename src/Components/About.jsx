@@ -92,7 +92,7 @@ const About = () => {
                 />
               </p>
             </div>
-            <a href="/Janakripan_Full_Stack_Resume.pdf" target="_blank">
+            <a href="/janakripan-cv-new-updated.pdf" target="_blank">
               <div className="absolute bottom-0 right-0 p-0.5 blur-border-2xl rounded-[7px] flex items-center justify-center w-[58px] h-[37px] animate-gradient-border">
                 <button
                   className="bg-black z-10 cursor-pointer w-full h-full rounded-[7px] flex items-center justify-center "
