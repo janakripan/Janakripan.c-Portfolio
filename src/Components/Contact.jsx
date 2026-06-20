@@ -26,59 +26,37 @@ const Contact = () => {
     const {name,value}=e.target;
     setData(prev=>({...prev,[name]:value}))
   }
-  const onSubmit = async (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
 
-    const form = event.target;
-    const formData = {
-      access_key: "963943f5-c17f-4805-8dbc-df34f497baec",
-      name: data.name,
-      email: data.email,
-      phone: data.phone,
-      subject: data.subject,
-      message: data.message,
-    };
-    console.log(formData);
+    const { name, email, phone, subject, message } = data;
     
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    const whatsappMessage = `*New Contact Form Submission*
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone}
+*Subject:* ${subject}
+*Message:* ${message}`;
 
-      const data = await res.json();
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappNumber = "918129290740";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-      if (data.success) {
-        Swal.fire({
-          title: "Success",
-          text: "Message Sent Successfully!",
-          icon: "success",
-        });
-        setData({
-          name:'',
-          email:'',
-          phone:'',
-          subject:'',
-          message:''
-        });
-      } else {
-        Swal.fire({
-          title: "Error",
-          text: data.message || "Something went wrong.",
-          icon: "error",
-        });
-      }
-    } catch (error) {
-      Swal.fire({
-        title: "Error",
-        text: "Network or server error.",
-        icon: "error",
-      });
-    }
+    window.open(whatsappUrl, "_blank");
+
+    Swal.fire({
+      title: "Opening WhatsApp",
+      text: "Redirecting you to WhatsApp to send your message.",
+      icon: "success",
+    });
+
+    setData({
+      name:'',
+      email:'',
+      phone:'',
+      subject:'',
+      message:''
+    });
   };
   return (
     <div className="text-white px-5 py-2 relative">

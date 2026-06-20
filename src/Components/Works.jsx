@@ -2,11 +2,10 @@
 import React from "react";
 import { VT323, Turret_Road } from "next/font/google";
 import Image from "next/image";
-import coderzon from "../../public/Assets/coderzon.png";
-import zoople from "../../public/Assets/zoople.svg";
-import portfolio from "../../public/Assets/Screenshot 2025-05-19 130926.png";
-import nike from "../../public/Assets/nike.png";
-import blog from "../../public/Assets/Screenshot 2025-03-04 191347.png";
+import scanntek from "../../public/Assets/scanntek.png";
+import portfolio from "../../public/Assets/janakripan_portfolio.png";
+import hexa from "../../public/Assets/hexa-productions.png";
+import architecture from "../../public/Assets/architecture.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faHandPointRight } from "@fortawesome/free-solid-svg-icons";
 import {motion} from 'framer-motion'
@@ -43,9 +42,9 @@ const Works = () => {
             <div className="h-20 border-l-2 border-blue-400/50"></div>
             <div className="w-12 h-12 rounded-full border-2 border-blue-400/50 bg-white/10 backdrop-blur-sm shadow-lg flex items-center justify-center">
               <Image
-                src={coderzon}
+                src={scanntek}
                 className="rounded-full"
-                alt="coderzon"
+                alt="scanntek"
                 width={28}
                 height={28}
               ></Image>
@@ -53,9 +52,9 @@ const Works = () => {
             <div className="h-20 border-l-2 border-blue-400/50"></div>
             <div className="w-12 h-12 rounded-full border-2 border-blue-400/50 bg-white/10 backdrop-blur-sm shadow-lg flex items-center justify-center">
               <Image
-                src={zoople}
+                src={scanntek}
                 className="rounded-full w-7 h-7 object-contain"
-                alt="zoople"
+                alt="scanntek"
                 width={28}
                 height={28}
               ></Image>
@@ -63,15 +62,15 @@ const Works = () => {
           </motion.div>
           <div className={`${turrent.className} flex flex-col gap-6 lg:gap-9 pt-6 lg:pt-30 ml-4 lg:ml-6`}>
             <motion.div variants={fading(1.5)} viewport={{once:true}} initial='initial' whileInView='after' className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-xl">
-              <h1 className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Software Developer</h1>
-              <p className="text-gray-300">Coderzon Technologies Pvt Ltd</p>
-              <p className="text-blue-300 text-sm">April 2025 - ongoing</p>
+              <h1 className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Junior Software Developer</h1>
+              <p className="text-gray-300">Scanntek IT Solutions LLP</p>
+              <p className="text-blue-300 text-sm">June 2025 - ongoing</p>
               <p className="text-green-300 text-sm">Full Time - Hybrid</p>
             </motion.div>
             <motion.div variants={fading(2)} viewport={{once:true}} initial='initial' whileInView='after' className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-xl">
-              <h1 className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">MERN Stack Developer</h1>
-              <p className="text-gray-300">Zoople Technology</p>
-              <p className="text-blue-300 text-sm">July 2024 - November 2024</p>
+              <h1 className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Frontend Developer</h1>
+              <p className="text-gray-300">Scanntek IT Solutions LLP</p>
+              <p className="text-blue-300 text-sm">December 2024 - May 2025</p>
               <p className="text-orange-300 text-sm">Intern</p>
             </motion.div>
           </div>
@@ -100,12 +99,12 @@ const Works = () => {
               </p>
             </div>
             <div className="absolute bottom-0 right-0 p-0.5 blur-border-2xl rounded-[7px] flex items-center justify-center w-[58px] h-[37px] animate-gradient-border">
-              <button
+              <Link href="https://janakripan-c-portfolio.vercel.app/" target="_blank"
                 className="bg-black z-10 cursor-pointer w-full h-full rounded-[7px] flex items-center justify-center "
                 title="view"
               >
                 <FontAwesomeIcon icon={faEye} bounce />
-              </button>
+              </Link>
             </div>
           </motion.div>
 
@@ -114,23 +113,22 @@ const Works = () => {
               <Image
                 width={300}
                 height={300}
-                src={nike}
+                src={hexa}
                 alt="portfolio"
                 className="rounded-md"
               />
               <p className="text-justify leading-relaxed">
-                developed a Nike clone website as part of my learning journey,
-                which may not be perfect but includes features like
-                multi-filtering.
+                Developed a website for client Hexa Productions as part of my work.
+                Designed and developed the website as per client requirements.
               </p>
 
               <p className={`${head.className} text-2xl`}>
-                View My Nike Project{" "}
+                View My work Project{" "}
                 <FontAwesomeIcon icon={faHandPointRight} shake />
               </p>
             </div>
             <div className="absolute bottom-0 right-0 p-0.5 blur-border-2xl rounded-[7px] flex items-center justify-center w-[58px] h-[37px] animate-gradient-border">
-              <Link href={'https://nike-clone-1.onrender.com/'}
+              <Link href={'https://hexa-production-mu.vercel.app/#home'}
                target="_blank"
                 className="bg-black z-10 cursor-pointer w-full h-full rounded-[7px] flex items-center justify-center "
                 title="view"
@@ -145,17 +143,16 @@ const Works = () => {
               <Image
                 width={300}
                 height={300}
-                src={blog}
+                src={architecture}
                 alt="portfolio"
                 className="rounded-md"
               />
               <p className="text-justify leading-relaxed">
-                developed a Blog website as part of my learning journey, which
-                may not be perfect but includes all CRUD operations .
+                developed a architecture website ui as part of my learning journey, which is dark themed , using modern ui design with smooth animations.
               </p>
 
               <p className={`${head.className} text-2xl`}>
-                View My Blog Project{" "}
+                View My Project{" "}
                 <FontAwesomeIcon icon={faHandPointRight} shake />
               </p>
             </div>

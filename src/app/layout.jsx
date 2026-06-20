@@ -36,7 +36,6 @@ export const metadata = {
     "Kerala Software Developer",
     "India Software Developer",
     "Kannur",
-    "St. Thomas College Engineering",
     "Modern Web Development",
     "Responsive Design",
     "Clean Code",
