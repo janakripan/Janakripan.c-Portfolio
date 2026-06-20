@@ -1,36 +1,36 @@
-'use client';
-import React, { useState } from 'react';
-import Swal from 'sweetalert2';
-import { VT323, Roboto_Condensed } from 'next/font/google';
+"use client";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
+import { VT323, Roboto_Condensed } from "next/font/google";
 
 const head = VT323({
-  subsets: ['latin'],
-  weight: ['400'],
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 const robo = Roboto_Condensed({
-  subsets: ['greek-ext'],
-  weight: ['600'],
+  subsets: ["greek-ext"],
+  weight: ["600"],
 });
 
 const Contact = () => {
-  const [data,setData]=useState({
-    name:'',
-    email:'',
-    phone:'',
-    subject:'',
-    message:''
-  })
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
 
-  const handleChange=(e)=>{
-    const {name,value}=e.target;
-    setData(prev=>({...prev,[name]:value}))
-  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData((prev) => ({ ...prev, [name]: value }));
+  };
   const onSubmit = (event) => {
     event.preventDefault();
 
     const { name, email, phone, subject, message } = data;
-    
+
     const whatsappMessage = `*New Contact Form Submission*
 *Name:* ${name}
 *Email:* ${email}
@@ -51,20 +51,25 @@ const Contact = () => {
     });
 
     setData({
-      name:'',
-      email:'',
-      phone:'',
-      subject:'',
-      message:''
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
     });
   };
   return (
     <div className="text-white px-5 py-2 relative">
       <div className="absolute top-0 right-0 w-96 bg-gradient-to-bl from-blue-500/20 via-blue-600/15 to-transparent rounded-full blur-3xl animate-pulse-glow"></div>
-      <div className="absolute -bottom-20 -left-20 w-[120%] h-50 bg-gradient-to-t from-blue-400/25 via-blue-500/18 to-transparent blur-2xl animate-pulse-glow" style={{animationDelay: '1.5s'}}></div>
+      <div
+        className="absolute -bottom-20 -left-20 w-[120%] h-50 bg-gradient-to-t from-blue-400/25 via-blue-500/18 to-transparent blur-2xl animate-pulse-glow"
+        style={{ animationDelay: "1.5s" }}
+      ></div>
       <div className="absolute top-1/3 left-10 w-72 h-72 bg-gradient-to-r from-purple-500/15 to-indigo-500/20 rounded-full blur-2xl animate-float"></div>
       <div className="flex items-center justify-center relative z-10">
-        <p className={`px-8 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-md border border-white/10 shadow-xl text-lg tracking-widest ${head.className}`}>
+        <p
+          className={`px-8 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-md border border-white/10 shadow-xl text-lg tracking-widest ${head.className}`}
+        >
           CONTACT ME
         </p>
       </div>
@@ -127,7 +132,9 @@ const Contact = () => {
               Submit
             </button>
           </form>
-          <p className="text-gray-400 italic">You can also reach me via social media.</p>
+          <p className="text-gray-400 italic">
+            You can also reach me via social media.
+          </p>
         </div>
 
         {/* Globe + Quote */}
@@ -138,7 +145,8 @@ const Contact = () => {
           </div>
 
           <blockquote className="text-center text-xl md:text-2xl bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent font-semibold italic leading-relaxed max-w-xl mt-6 backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
-            “Communication is the bridge between confusion and clarity — reach out and let's build that bridge.”
+            “Communication is the bridge between confusion and clarity — reach
+            out and let's build that bridge.”
           </blockquote>
         </div>
       </div>

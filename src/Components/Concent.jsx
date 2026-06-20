@@ -1,24 +1,26 @@
-'use client'
-import React, { useState, useEffect } from 'react'
-import { Fredoka } from 'next/font/google'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+"use client";
+import React, { useState, useEffect } from "react";
+import { Fredoka } from "next/font/google";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fredoka = Fredoka({
-  subsets: ['latin'],
-  weight: ['400', '600']
-})
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
 
 const IntroScreen = ({ setMusic }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black text-center px-6 relative">
-      
       {/* Subtle background grid */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: '50px 50px'
-        }}></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: "50px 50px",
+          }}
+        ></div>
       </div>
 
       {/* Professional Profile Section */}
@@ -46,7 +48,7 @@ const IntroScreen = ({ setMusic }) => {
             {/* Subtle overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </motion.div>
-          
+
           {/* Professional status indicator */}
           <motion.div
             initial={{ scale: 0 }}
@@ -63,7 +65,9 @@ const IntroScreen = ({ setMusic }) => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-center"
         >
-          <h1 className={`text-3xl md:text-4xl font-semibold text-white mb-3 ${fredoka.className}`}>
+          <h1
+            className={`text-3xl md:text-4xl font-semibold text-white mb-3 ${fredoka.className}`}
+          >
             Janakripan
           </h1>
           <motion.div
@@ -76,7 +80,8 @@ const IntroScreen = ({ setMusic }) => {
               Software Developer
             </p>
             <p className="text-sm text-gray-400 max-w-md mx-auto leading-relaxed">
-              Crafting digital experiences with modern technologies and clean code
+              Crafting digital experiences with modern technologies and clean
+              code
             </p>
           </motion.div>
         </motion.div>
@@ -92,9 +97,21 @@ const IntroScreen = ({ setMusic }) => {
         {/* Clean music icon */}
         <div className="flex items-center justify-center mb-6">
           <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-violet-500/20 rounded-lg flex items-center justify-center">
-            <svg className="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM15.657 6.343a1 1 0 011.414 0A9.972 9.972 0 0119 12a9.972 9.972 0 01-1.929 5.657 1 1 0 11-1.414-1.414A7.971 7.971 0 0017 12c0-1.594-.471-3.078-1.343-4.243a1 1 0 010-1.414z" clipRule="evenodd" />
-              <path fillRule="evenodd" d="M13.828 8.172a1 1 0 011.414 0A5.983 5.983 0 0117 12a5.983 5.983 0 01-1.758 3.828 1 1 0 11-1.414-1.414A3.987 3.987 0 0015 12a3.987 3.987 0 00-1.172-2.828 1 1 0 010-1.414z" clipRule="evenodd" />
+            <svg
+              className="w-6 h-6 text-blue-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM15.657 6.343a1 1 0 011.414 0A9.972 9.972 0 0119 12a9.972 9.972 0 01-1.929 5.657 1 1 0 11-1.414-1.414A7.971 7.971 0 0017 12c0-1.594-.471-3.078-1.343-4.243a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+              <path
+                fillRule="evenodd"
+                d="M13.828 8.172a1 1 0 011.414 0A5.983 5.983 0 0117 12a5.983 5.983 0 01-1.758 3.828 1 1 0 11-1.414-1.414A3.987 3.987 0 0015 12a3.987 3.987 0 00-1.172-2.828 1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
             </svg>
           </div>
         </div>
@@ -102,7 +119,7 @@ const IntroScreen = ({ setMusic }) => {
         <h2 className="text-xl font-semibold text-white mb-2 text-center">
           Audio Preference
         </h2>
-        
+
         <p className="text-gray-400 mb-6 text-sm text-center leading-relaxed">
           Would you like background music while exploring my portfolio?
         </p>
@@ -116,11 +133,15 @@ const IntroScreen = ({ setMusic }) => {
             whileTap={{ scale: 0.98 }}
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217z" clipRule="evenodd" />
+              <path
+                fillRule="evenodd"
+                d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217z"
+                clipRule="evenodd"
+              />
             </svg>
             <span>Enable</span>
           </motion.button>
-          
+
           <motion.button
             onClick={() => setMusic(false)}
             className="bg-gray-700/80 hover:bg-gray-700 text-gray-300 py-3 px-4 rounded-lg font-medium text-sm transition-all duration-200 flex items-center justify-center space-x-2"
@@ -128,7 +149,11 @@ const IntroScreen = ({ setMusic }) => {
             whileTap={{ scale: 0.98 }}
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              <path
+                fillRule="evenodd"
+                d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
             </svg>
             <span>Skip</span>
           </motion.button>
@@ -147,14 +172,23 @@ const IntroScreen = ({ setMusic }) => {
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           className="text-gray-500"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
           </svg>
         </motion.div>
       </motion.div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default IntroScreen
+export default IntroScreen;

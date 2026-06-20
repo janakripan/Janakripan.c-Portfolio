@@ -1,15 +1,16 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
 
-const CircleTextIcon = ({ text, icon: Icon, iconColor = '#0A66C2', iconSize = 20,url='#' }) => {
+const CircleTextIcon = ({
+  text,
+  icon: Icon,
+  iconColor = "#0A66C2",
+  iconSize = 20,
+  url = "#",
+}) => {
   return (
     <div className="circle relative w-[90px] h-[90px] p-0.5">
-      <svg
-        width="80"
-        height="80"
-        viewBox="0 0 100 100"
-        className="block"
-      >
+      <svg width="80" height="80" viewBox="0 0 100 100" className="block">
         <defs>
           <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#ff00cc" />
@@ -33,12 +34,16 @@ const CircleTextIcon = ({ text, icon: Icon, iconColor = '#0A66C2', iconSize = 20
           className="animate-rotateText origin-[50px_50px] text-gray-400"
         >
           <textPath href="#circlePath" startOffset="7%">
-            {text }
+            {text}
           </textPath>
         </text>
 
         <foreignObject x="35" y="35" width="30" height="35">
-          <a className="flex justify-center items-center h-[30px] cursor-pointer hover:scale-115" href={url} target='_blank'>
+          <a
+            className="flex justify-center items-center h-[30px] cursor-pointer hover:scale-115"
+            href={url}
+            target="_blank"
+          >
             <Icon style={{ color: iconColor, fontSize: iconSize }} />
           </a>
         </foreignObject>
@@ -60,7 +65,7 @@ const CircleTextIcon = ({ text, icon: Icon, iconColor = '#0A66C2', iconSize = 20
         `}
       </style>
     </div>
-  )
-}
+  );
+};
 
-export default CircleTextIcon
+export default CircleTextIcon;
