@@ -38,7 +38,7 @@ const IntroScreen = ({ setMusic }) => {
           >
             <Image
               src="/Assets/concent.jpg"
-              alt="Anujith VK"
+              alt="Janakripan"
               width={150}
               height={150}
               className="w-full h-full object-cover"
@@ -64,7 +64,7 @@ const IntroScreen = ({ setMusic }) => {
           className="text-center"
         >
           <h1 className={`text-3xl md:text-4xl font-semibold text-white mb-3 ${fredoka.className}`}>
-            Anujith VK
+            Janakripan
           </h1>
           <motion.div
             initial={{ opacity: 0 }}
@@ -73,7 +73,7 @@ const IntroScreen = ({ setMusic }) => {
             className="space-y-2"
           >
             <p className="text-lg text-gray-300 font-medium">
-              Software Engineer & Developer
+              Software Developer
             </p>
             <p className="text-sm text-gray-400 max-w-md mx-auto leading-relaxed">
               Crafting digital experiences with modern technologies and clean code

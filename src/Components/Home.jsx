@@ -18,17 +18,7 @@ const desig=Quantico({
 })
 
 const Home = () => {
-  const [currentTitle, setCurrentTitle] = useState('DEVELOPER')
-   const text = "Anujith vk-Linkedin"
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTitle((prevTitle) =>
-        prevTitle === 'DEVELOPER' ? 'ENGINEER' : 'DEVELOPER'
-      )
-    }, 2000)
-
-    return () => clearInterval(interval)
-  }, [])
+  const currentTitle = 'DEVELOPER'
   return (
     <div className="text-white flex flex-col sm:flex-row lg:min-h-screen relative pt-14 home-container">
       {/* Background gradient orbs with enhanced blending */}
@@ -41,7 +31,7 @@ const Home = () => {
       <div className="sm:w-1/2 w-full flex flex-col justify-center gap-6 px-6 py-10 relative z-10 text-section">
          <motion.div variants={leftFadeIn(-50,0.5)}  initial='initial' whileInView='after' viewport={{once:true}} className="flex gap-4 items-center flex-wrap">
           <h1 className={`${underdog.className} text-2xl flex items-center gap-2`}>
-            Hi There <span className="text-3xl sm:text-4xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Anujith</span> here
+            Hi There <span className="text-3xl sm:text-4xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Janakripan</span> here
           </h1>
           <motion.div {...handWave} style={{ transformOrigin: 'bottom center' }}  >
            <div className='text-3xl'>👋</div>
@@ -70,9 +60,9 @@ const Home = () => {
     
         <div className={`hidden sm:block pt-6 text-base sm:text-xl text-justify leading-relaxed max-w-3xl ${underdog.className} backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10 shadow-2xl`}>
           <motion.p variants={leftFadeIn(-190,1.8)} initial='initial' whileInView='after' viewport={{once:true}}>
-              Welcome! I'm Anujith VK, a passionate Software Engineer and Full Stack Developer from Thalassery, Kerala. 
-              I specialize in building modern, scalable web applications using React, Next.js, Node.js, and the MERN stack. 
-              From crafting intuitive front-end experiences to developing robust back-end systems, I bring ideas to life with clean, efficient code.
+              Welcome! I'm Janakripan, a passionate Software Developer from Thalassery, Kerala. 
+              My core expertise lies in building highly interactive, modern front-end experiences using React and Next.js. 
+              Additionally, I have strong foundational knowledge in back-end development with Node.js and Express.js, allowing me to integrate seamlessly across the full stack.
           </motion.p>
           <div className='flex flex-col gap-1 items-center justify-center pt-5 text-3xl font-bold'>
            <motion.p variants={rightFadeIn(500,2)} initial='initial' whileInView='after' viewport={{once:true}} className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-400 to-green-500 font-bold text-xl">I'm Available on</motion.p>
@@ -83,21 +73,21 @@ const Home = () => {
         iconColor="#0A66C2"
         iconSize={30}
         className='cursor-pointer'
-        url='https://www.linkedin.com/in/anujithvk'
+        url='https://www.linkedin.com/in/janakripan'
       />
        <CircleTextIcon
         text="Checkout&nbsp;- &nbsp;my&nbsp; - Github - Account "
         icon={() => <FontAwesomeIcon icon={faGithub} spin />}
         iconColor="#0A66C2"
         iconSize={30}
-        url='https://github.com/Anujith-vk'
+        url='https://github.com/janakripan'
       />
       <CircleTextIcon
         text="Checkout-my- Instagram - Account"
         icon={() => <FontAwesomeIcon icon={faInstagram} />}
         iconColor="#0A66C2"
         iconSize={30}
-        url='https://www.instagram.com/anujith.__/?'
+        url='https://www.instagram.com/janakripan'
       />
             </motion.div>
           </div>
@@ -113,7 +103,7 @@ const Home = () => {
           <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md rounded-3xl p-2 border border-white/10 shadow-2xl">
             <Image
               src="/Assets/portfolio.png"
-              alt="Anujith VK - Software Engineer and Full Stack Developer Portfolio"
+              alt="Janakripan - Software Developer Portfolio"
               width={400}
               height={400}
               className="w-full h-auto object-contain rounded-2xl"
@@ -126,9 +116,8 @@ const Home = () => {
       {/* Description for mobile only */}
       <div className={`block sm:hidden px-6 pb-10 text-base text-justify leading-relaxed ${underdog.className} relative z-10 backdrop-blur-sm bg-white/5 rounded-2xl mx-6 p-6 border border-white/10`}>
         <p>
-            I'm Anujith VK, a passionate Software Engineer and Full Stack Developer from Thalassery, Kerala.
-            I specialize in React, Next.js, Node.js, and MERN stack development to create modern web applications.
-            I love solving complex problems and turning innovative ideas into scalable digital solutions.
+            I'm Janakripan, a passionate Software Developer from Thalassery, Kerala.
+            I specialize in crafting exceptional user interfaces with React and Next.js, backed by a solid understanding of server-side development using Node.js and Express.js.
           </p>
              <div className='flex flex-col gap-1 items-center justify-center pt-5 text-3xl font-bold'>
            <motion.p variants={rightFadeIn(100,1)} initial='initial' whileInView='after' viewport={{once:true}} className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-400 to-green-500 font-bold text-xl">I'm Available on</motion.p>
@@ -139,21 +128,21 @@ const Home = () => {
         iconColor="#0A66C2"
         iconSize={30}
         className='cursor-pointer'
-        url='https://www.linkedin.com/in/anujithvk'
+        url='https://www.linkedin.com/in/janakripan'
       />
        <CircleTextIcon
         text="Checkout&nbsp;- &nbsp;my&nbsp; - Github - Account "
         icon={() => <FontAwesomeIcon icon={faGithub} spin />}
         iconColor="#0A66C2"
         iconSize={30}
-        url='https://github.com/Anujith-vk'
+        url='https://github.com/janakripan'
       />
       <CircleTextIcon
         text="Checkout-my- Instagram - Account"
         icon={() => <FontAwesomeIcon icon={faInstagram} />}
         iconColor="#0A66C2"
         iconSize={30}
-        url='https://www.instagram.com/anujith.__/?'
+        url='https://www.instagram.com/janakripan'
       />
             </motion.div>
           </div>

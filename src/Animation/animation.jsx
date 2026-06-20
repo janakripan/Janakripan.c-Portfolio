@@ -1,24 +1,27 @@
 'use client'
+
+const smoothEase = [0.22, 1, 0.36, 1];
+
 export const topBar = (isOpen) => ({
   initial: { rotate: 0 },
   animate: { rotate: isOpen ? 45 : 0, y: isOpen ? 6 : 0 },
-  transition: { duration: 0.3, ease: 'easeInOut' },
+  transition: { duration: 0.4, ease: smoothEase },
 });
 export const middleBar=(isOpen)=>({
     initial: { rotate: 0 },
   animate: { rotate: isOpen ? -45 : 0 },
-  transition: { duration: 0.3, ease: 'easeInOut' },
+  transition: { duration: 0.4, ease: smoothEase },
 })
 export const bottomBar=(isOpen)=>({
    initial: { rotate: 0 },
      animate: { rotate: isOpen ? 45 : 0 , y: isOpen ? -6 : 0},
-  transition: { duration: 0.3, ease: 'easeInOut' },
+  transition: { duration: 0.4, ease: smoothEase },
 })
 
 export const sideNav=(isOpen)=>({
   initial:{y:-300},
   animate:{y:isOpen ? 0 :-300},
-  transition:{duration:0.3,ease:"easeInOut"}
+  transition:{duration:0.5,ease:smoothEase}
 })
 
 export const handWave = {
@@ -42,8 +45,8 @@ export const slideUpStagger = {
     opacity: 1,
     transition: {
       delay: i * 0.5, 
-      duration: 0.6,
-      ease: "easeOut",
+      duration: 0.8,
+      ease: smoothEase,
     },
   }),
 }
@@ -59,8 +62,8 @@ export const image={
     scale:1,
     rotate: [0, 5, -5, 0],
     transition:{
-       duration:1,
-       ease:"easeInOut"
+       duration:1.2,
+       ease: smoothEase
     }
   }
 }
@@ -75,7 +78,7 @@ export const leftFadeIn=(position,delay)=>({
     opacity:1,
     transition:{
      duration:delay,
-     ease:'easeInOut'
+     ease:smoothEase
     }
   }
 })
@@ -90,7 +93,7 @@ export const rightFadeIn=(position,delay)=>({
     opacity:1,
     transition:{
      duration:delay,
-     ease:'easeInOut'
+     ease:smoothEase
     }
   }
 })
@@ -104,7 +107,8 @@ export const available={
     y:0,
     opacity:1,
     transition:{
-      duration:2
+      duration: 1.2,
+      ease: smoothEase
     }
   }
 }
@@ -118,7 +122,8 @@ export const fading=(delay)=>({
     opacity:1,
     scale:1,
     transition:{
-      duration:delay
+      duration:delay,
+      ease: smoothEase
     }
   }
 })

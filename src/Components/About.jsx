@@ -43,9 +43,9 @@ const About = () => {
       </div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start relative z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch relative z-10">
         {/* Text Content */}
-        <motion.div viewport={{once:true}} variants={leftFadeIn(-100,0.8)} initial='initial' whileInView='after' className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-8 text-gray-100 shadow-2xl border border-white/10 relative overflow-hidden">
+        <motion.div viewport={{once:true}} variants={leftFadeIn(-100,0.8)} initial='initial' whileInView='after' className="lg:col-span-2 flex flex-col justify-center bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-8 text-gray-100 shadow-2xl border border-white/10 relative overflow-hidden">
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-blue-500/30 to-purple-500/35 rounded-full blur-2xl animate-pulse-glow"></div>
           <h2
             className={`text-3xl font-bold mb-4 ${head.className} underline-offset-5 underline bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent relative z-10`}
@@ -56,76 +56,53 @@ const About = () => {
             className={`leading-relaxed text-xl mb-4 text-justify ${tinos.className} relative z-10`}
             style={{ hyphens: "auto" }}
           >
-            I'm a passionate full stack developer who enjoys building clean,
-            scalable web applications with intuitive user interfaces. My journey
-            has been centered around modern web technologies like React,
-            Node.js, Express, MongoDB, and Tailwind CSS. I love turning ideas
-            into real, functional solutions — whether it’s solving problems or
-            creating seamless user experiences across the stack.
+            I'm a passionate software developer who thrives on building clean,
+            scalable web applications with highly intuitive user interfaces. My primary 
+            expertise is rooted in modern front-end ecosystems, particularly React and Next.js. 
+            Beyond the client side, I am well-versed in back-end technologies like 
+            Node.js and Express.js, enabling me to design and consume APIs effectively 
+            and deliver complete, seamless digital solutions.
           </p>
         </motion.div>
 
-        {/* Image or Decorative Side */}
-        <div className="flex items-center flex-col gap-3 justify-center">
-          <motion.div variants={image} initial='initial' whileInView='animate' viewport={{once:true}} className="w-full h-10  bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl shadow-md flex items-center justify-center text-4xl font-bold text-white">
+        <div className="lg:col-span-1 flex flex-col gap-3 h-full">
+          <motion.div variants={image} initial='initial' whileInView='animate' viewport={{once:true}} className="w-full shrink-0 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl shadow-md flex items-center justify-center text-4xl font-bold text-white">
             <span>👨‍💻</span>
           </motion.div>
-          <div className="flex  xl:justify-between flex-wrap items-center justify-center gap-2 w-full">
-            <motion.div className="relative" variants={fading(0.5)}
-                initial='initial'
-                whileInView='after'
-                viewport={{once:true}}>
-                
-              <div 
-                
-                className="text-black p-5 flex justify-center flex-col gap-3 card"
-              >
-                <h1 className={`${aw.className} text-2xl`}>Resume</h1>
-                <p
-                  className={`${wall.className} text-sm text-justify leading-relaxed`}
-                >
-                  {" "}
-                  A resume is more than just a piece of paper — it's a powerful
-                  tool that showcases your skills, experience, and potential to
-                  employers. Make it compelling, well-structured, and tailored
-                  to leave a lasting impression.
-                </p>
-                <p className={`${aw.className} pt-4`}>
-                  Download My Resume{" "}
-                  <FontAwesomeIcon
-                    icon={faHandPointRight}
-                    shake
-                    className="text-xl text-blue-500 pr-2 pt-1"
-                  />
-                </p>
-              </div>
-                <a href="/Anujith_vk_Full_Stack_Resume.pdf" target="_blank">
-              <div className="absolute bottom-0 right-0 p-0.5 blur-border-2xl rounded-[7px] flex items-center justify-center w-[58px] h-[37px] animate-gradient-border">
+          <motion.div className="relative w-full flex-grow" variants={fading(0.5)}
+              initial='initial'
+              whileInView='after'
+              viewport={{once:true}}>
               
+            <div className="text-black w-full h-full p-5 flex justify-center flex-col gap-3 resume-card">
+              <h1 className={`${aw.className} text-2xl`}>Resume</h1>
+              <p className={`${wall.className} text-sm text-justify leading-relaxed`}>
+                {" "}
+                A resume is more than just a piece of paper — it's a powerful
+                tool that showcases your skills, experience, and potential to
+                employers. Make it compelling, well-structured, and tailored
+                to leave a lasting impression.
+              </p>
+              <p className={`${aw.className} pt-4`}>
+                Download My Resume{" "}
+                <FontAwesomeIcon
+                  icon={faHandPointRight}
+                  shake
+                  className="text-xl text-blue-500 pr-2 pt-1"
+                />
+              </p>
+            </div>
+            <a href="/Janakripan_Full_Stack_Resume.pdf" target="_blank">
+              <div className="absolute bottom-0 right-0 p-0.5 blur-border-2xl rounded-[7px] flex items-center justify-center w-[58px] h-[37px] animate-gradient-border">
                 <button
                   className="bg-black z-10 cursor-pointer w-full h-full rounded-[7px] flex items-center justify-center "
                   title="Dowload Resume"
                 >
                   <FontAwesomeIcon icon={faDownload} bounce />
                 </button>
-
               </div>
-                              </a>
-            </motion.div>
-            <motion.div  variants={fading(0.8)}
-                initial='initial'
-                whileInView='after' viewport={{once:true}}  className="w-[300px] min-w-[300px] h-[300px] bg-white text-black flex flex-col gap-3 justify-center px-5 pb-10 rounded-xl">
-              <h1 className={`${aw.className} text-2xl `}>Education</h1>
-              <p className={`${wall.className}`}>
-                Bachelor of Technology (B.Tech) in Computer Science and
-                Engineering
-              </p>
-              <p className={`${wall.className}`}>
-                St. Thomas College of Engineering and Technology, Kannur
-              </p>
-              <p className={`${wall.className}`}>2020-2024 Batch</p>
-            </motion.div>
-          </div>
+            </a>
+          </motion.div>
         </div>
       </div>
 <motion.div variants={available} initial='initial' whileInView='after' viewport={{once:true}} className={`w-full p-8 flex flex-col gap-4 justify-center rounded-3xl relative bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md border border-white/10 shadow-2xl overflow-hidden`}>
